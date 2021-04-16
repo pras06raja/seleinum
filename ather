@@ -1,0 +1,34 @@
+package team;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+/**
+ * @author 91830
+ *
+ */
+public class ather {
+
+	WebDriver driver;
+	
+	public static void main(String[] args)  {
+		String baseUrl = "https://app.atherenergy.com/product/450x/preorder";
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\91830\\Desktop\\chromedriver.exe");
+	     WebDriver driver = new ChromeDriver ();
+	     //JavascriptExecutor jse = ((JavascriptExecutor) driver);
+	     driver.get(baseUrl);
+	     //driver.findElement(By.linkText("Mint Green")).click();
+	     //driver.get("https://app.atherenergy.com/product/450x/preorder");
+	     //driver.findElement(By.linkText("Mint Green")).click();
+	     driver.findElement(By.cssSelector("img[src='/images/mint ather@2x.png']")).click();
+	     System.out.println("title of page is :  " + driver.getTitle());
+	     //Thread.sleep(5000);
+	     //WebElement Element = driver.findElement(By.linkText("Calculate your EMI"));
+	    
+	     //jse.executeScript("arguments[0].scrollIntoView();", Element);
+	     
+	}
+	
+}
